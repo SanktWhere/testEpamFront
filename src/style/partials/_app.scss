@@ -14,11 +14,8 @@ $active-color: #fff;
 
   
 body {
-    display: flex;
-    justify-content: center;
     padding: 10px;
-    background: #e3e3e3;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Arial';
     font-size: 14px;
 }
 
@@ -47,4 +44,147 @@ body {
 
 .text_gray {
     color: #a1a1a1;
+}
+
+.user__image {
+    display: flex;
+    justify-content: center;
+    max-height: 72px;
+
+    img {
+        max-width: 72px;
+        border-radius: 50%;
+        border: 1px solid rgba(0,0,0,0.3);
+    }
+}
+
+.user {
+    width: 150px;
+    border: 1px solid rgba(0,0,0,0.3);
+    background: #F0F8FF;    
+    height: 100%;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15%;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.user__info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: rgba(0,0,0,0.3);
+    margin-top: 5px;
+    width: 100%;
+    
+    span {
+        margin: 3px;
+    }
+}
+
+.content {
+    display: flex;
+    width: 1920px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.user__modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
+    cursor: default;
+}
+
+.user__modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5%;
+    background: #F0F8FF;
+    overflow: hidden;
+    border: none;
+    flex-basis: 300px;
+    padding: 15px;
+
+    div {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 3px;
+
+        span {
+            margin-right: 5px;
+        }
+    }
+}
+
+.close {
+    color: #aaa;
+    align-self: flex-end;
+    margin-right: 8px;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+.user__modal-image {
+    width: 100%;
+    max-height: 128px;
+    img {
+        max-width: 128px;
+        border-radius: 25%;
+    }
+    
+}
+
+.select {
+    select {
+        border: 1px solid rgba(0,0,0,.3);
+    }
+
+    select:focus {
+        outline: none;
+    }
+}
+
+@media (max-width: 1919px) {
+    .content {
+        justify-content: space-evenly;
+    }
 }
