@@ -94,18 +94,15 @@ function img() {
         .pipe(reload({ stream: true }));
 }
 
-function font() {
+function font(done) {
     return src(path.src.fonts)
-    .pipe(dest(path.build.fonts))
+        .pipe(dest(path.build.fonts));
+        done();
 }
 
 function webserver() {
     browserSync(config);
 };
-
-function build() {
-    parallel(js, css, font, html, img);
-}
 
 function watch_all() {
     watch(path.watch.html, html);
@@ -121,10 +118,10 @@ exports.font = font;
 exports.html = html;
 exports.img = img;
 
-exports.build = build;
+exports.build = series(js, css, font, html, img);
 exports.watch = watch_all;
 exports.server = webserver;
 
-exports.default = parallel(build, watch_all, webserver);
+exports.default = parallel(watch_all, webserver);
 
 
