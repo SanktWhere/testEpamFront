@@ -19,6 +19,6 @@ gulp watch
 запуск локльного сервера
 gulp server
 
-запуск всех трех тасков (build, watch, server) параллельно
+запуск двух тасков по умолчанию (watch, server)
 gulp
 
