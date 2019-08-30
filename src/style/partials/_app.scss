@@ -1,0 +1,50 @@
+@font-face {
+    font-family: "Arial";
+    src: url('../fonts/Arial-Black.woff');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+$main-color: #0a81b3;
+$second-color: #e67c00;
+$hover-color: #f3f3f3;
+$active-color: #fff;
+
+  
+body {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background: #e3e3e3;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+}
+
+.button {
+    height: 30px;
+    background: $second-color;
+    color: #fff;
+    border: none;
+    box-shadow: 0 48px 80px -32px rgba(0,0,0,0.3);
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: lighten($second-color, 10%)
+}
+
+.text_bold {
+    font-weight: bold;
+}
+
+.text_italic {
+    font-style: italic;
+}
+
+.text_gray {
+    color: #a1a1a1;
+}
