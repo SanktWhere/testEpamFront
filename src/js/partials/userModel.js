@@ -1,24 +1,15 @@
 export class userModel {
-    /*
-        id - int
-        name - str
-        city - str
-        materialStatus - str
-        telephone - str
-        email - str
-        interest - str[]
-        status - str
-        friends - friendsId[]
-    */
-    constructor(id, name, city, materialStatus, telephone, email, interest, status, friends) {
+    constructor(id, nameTitle, firstName, lastName, city, telephone, email, street, state, avatarMedium, avatarLarge) {
         this.id = id;
-        this.name = name;
+        this.nameTitle = nameTitle;
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.city = city;
-        this.materialStatus = materialStatus;
         this.telephone = telephone;
         this.email = email;
-        this.interest = interest;
-        this.status = status;
-        this.friends = friends;
+        this.street = street;
+        this.state = state;
+        this.avatarMedium = avatarMedium;
+        this.avatarLarge = avatarLarge;
     }
 }
