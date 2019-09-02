@@ -88,12 +88,16 @@ body {
 }
 
 .content {
+    margin: 0 auto;
+    max-width: 1910px;
+}
+
+.content-main {
     display: flex;
-    width: 1920px;
+    
     flex-wrap: wrap;
     justify-content: flex-start;
     height: 100%;
-    margin: 0 auto;
 }
 
 .user__modal {
