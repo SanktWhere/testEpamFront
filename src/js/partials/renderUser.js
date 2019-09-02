@@ -1,6 +1,5 @@
 export class renderUser {
     static render(data, placeClass) {
-        console.log(this);
         let div = document.createElement('div');
         div.classList.add('user');
 

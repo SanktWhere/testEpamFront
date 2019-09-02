@@ -7,14 +7,12 @@ export class userRepository {
         this.options = 'results=20&nat=us,fr&inc=name,picture,location,email,phone';
         let that = this;
         this.getData('https://randomuser.me/api/?', this.options).then(function (result) {
-            console.log(JSON.parse(result.responseText).results);
             that.fillStore(JSON.parse(result.responseText).results);
             for (const key in that.storage) {
-                renderUser.render(that.storage[key], 'content');
+                renderUser.render(that.storage[key], 'content-main');
             }
             
         });
-        console.log(this.storage);
     }
 
     fillStore(data) {
@@ -32,7 +30,6 @@ export class userRepository {
         return new Promise(function(resolve, reject) {
             xhr.onload = () => resolve(xhr);
             xhr.onerror = () => reject(new Error(`Loading error`));
-            console.log(url + options);
             xhr.open('GET', url + options, true);
             xhr.send();
         });

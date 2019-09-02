@@ -33,14 +33,14 @@ document.addEventListener('DOMContentLoaded', function() {
             sortUsers(userRepo.storage);
             renderUser.clearRenderContent('content');
             for (const key in userRepo.storage) {
-                renderUser.render(userRepo.storage[key], 'content');
+                renderUser.render(userRepo.storage[key], 'content-main');
             }
         }
         else if (e.target.value === 'CBA') {
             sortUsers(userRepo.storage, 'dec');
             renderUser.clearRenderContent('content');
             for (const key in userRepo.storage) {
-                renderUser.render(userRepo.storage[key], 'content');
+                renderUser.render(userRepo.storage[key], 'content-main');
             }
         }
     });
