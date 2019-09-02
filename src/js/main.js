@@ -31,14 +31,14 @@ document.addEventListener('DOMContentLoaded', function() {
     select.addEventListener('change', function(e) {
         if (e.target.value === 'ABC') {
             sortUsers(userRepo.storage);
-            renderUser.clearRenderContent('content');
+            renderUser.clearRenderContent('content-main');
             for (const key in userRepo.storage) {
                 renderUser.render(userRepo.storage[key], 'content-main');
             }
         }
         else if (e.target.value === 'CBA') {
             sortUsers(userRepo.storage, 'dec');
-            renderUser.clearRenderContent('content');
+            renderUser.clearRenderContent('content-main');
             for (const key in userRepo.storage) {
                 renderUser.render(userRepo.storage[key], 'content-main');
             }
